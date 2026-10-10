@@ -1,19 +1,16 @@
-# Gestionnaire de tâches (PHP + SQLite)
+# Convertisseur HTG / USD (Flutter)
 
-Petite application web pour ajouter, terminer et supprimer des tâches.
-
-## Technologies
-PHP 8, PDO, SQLite, HTML/CSS
+Application mobile simple pour convertir des gourdes (HTG) en dollars (USD) et inversement,
+avec un taux de change modifiable.
 
 ## Lancer le projet
-Dans ce dossier :
+Flutter doit être installé (https://docs.flutter.dev/get-started/install).
 
-    php -S localhost:8000
+    flutter create .        # génère les dossiers android/ios (une seule fois)
+    flutter pub get
+    flutter run
 
-Puis ouvrir http://localhost:8000 dans le navigateur.
-(Extension PHP requise : `pdo_sqlite`, activée par défaut dans la plupart des installations.)
-
-## Ce que démontre ce projet
-- Requêtes préparées (protection contre l'injection SQL)
-- Échappement des sorties (protection XSS)
-- Pattern Post/Redirect/Get
+## Points techniques
+- Dart / Flutter, Material 3
+- StatefulWidget, gestion des TextEditingController
+- Validation des entrées (virgule ou point décimal, taux invalide)

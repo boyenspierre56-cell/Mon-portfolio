@@ -1,18 +1,19 @@
-# Organisateur de fichiers (Python)
+# Gestionnaire de tâches (PHP + SQLite)
 
-Script en ligne de commande qui range les fichiers d'un dossier (par exemple « Téléchargements »)
-dans des sous-dossiers : Images, Documents, Videos, Audio, Archives, Code, Autres.
+Petite application web pour ajouter, terminer et supprimer des tâches.
 
-## Utilisation
-Simulation (ne déplace rien) :
+## Technologies
+PHP 8, PDO, SQLite, HTML/CSS
 
-    python organizer.py ~/Downloads --dry-run
+## Lancer le projet
+Dans ce dossier :
 
-Exécution réelle :
+    php -S localhost:8000
 
-    python organizer.py ~/Downloads
+Puis ouvrir http://localhost:8000 dans le navigateur.
+(Extension PHP requise : `pdo_sqlite`, activée par défaut dans la plupart des installations.)
 
-## Points techniques
-- Python 3.8+, bibliothèque standard uniquement (aucune dépendance)
-- `argparse`, `pathlib`, `shutil`
-- Protection contre l'écrasement de fichiers (renommage automatique)
+## Ce que démontre ce projet
+- Requêtes préparées (protection contre l'injection SQL)
+- Échappement des sorties (protection XSS)
+- Pattern Post/Redirect/Get
